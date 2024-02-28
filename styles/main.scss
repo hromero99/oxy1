@@ -1,0 +1,42 @@
+.features {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-evenly;
+    padding-top: 2em;
+    &__container{
+        text-align: center;
+        margin-bottom: 2em;
+        &__text{
+            font-size: 1rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        &--black{
+            border-color: black;
+            border-style: solid;
+            border-width: 1em;
+        }
+        &--yellow{
+            border-color: yellow;
+            border-style: solid;
+            border-width: 1em;
+        }
+        &--blue{
+            border-color: blue;
+            border-style: solid;
+            border-width: 1em;
+        }
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .features{
+        display: flex;
+        flex-direction: column;
+        &__container{
+            &--yellow{
+                border-color: white;
+            }
+        }
+    }
+}
